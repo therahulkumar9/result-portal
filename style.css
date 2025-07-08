@@ -1,0 +1,116 @@
+:root {
+  --bg-color: #121212;
+  --text-color: #f1f1f1;
+  --primary-color: #2196f3;
+  --secondary-color: #666;
+  --input-bg: #1e1e1e;
+  --border-color: #333;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form {
+  margin-top: 10px;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form-group {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: var(--input-bg);
+  color: var(--text-color);
+}
+
+.error {
+  color: #f44336;
+  font-size: 0.85em;
+  margin-top: 5px;
+}
+
+.button-group {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn {
+  background: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  margin: 6px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-secondary {
+  background: var(--secondary-color);
+}
+
+.preview-container {
+  display: none;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.pdf-frame {
+  width: 100%;
+  height: 500px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+  }
+
+  .pdf-frame {
+    height: 400px;
+  }
+}
